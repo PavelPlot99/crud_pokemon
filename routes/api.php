@@ -24,4 +24,5 @@ Route::prefix('pokemons')->group(function() {
    Route::get('/{pokemon}', [PokemonController::class, 'show'])->name('pokemon.show');
    Route::patch('/{pokemon}', [PokemonController::class, 'update'])->name('pokemon.update');
    Route::post('/', [PokemonController::class, 'store'])->name('pokemon.store');
+   Route::delete('/{pokemon}', [PokemonController::class, 'destroy'])->name('pokemon.destroy');
 });

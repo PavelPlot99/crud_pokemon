@@ -8,7 +8,7 @@ use App\Models\Pokemon;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class StorePokemon extends FormRequest
+class StorePokemonRequest extends FormRequest
 {
     public function rules(): array
     {
