@@ -14,6 +14,8 @@ class Pokemon extends Model
 
     protected $guarded = ['id'];
 
+    protected $table = 'pokemons';
+
     public function location(): BelongsTo
     {
         return $this->belongsTo(Location::class);

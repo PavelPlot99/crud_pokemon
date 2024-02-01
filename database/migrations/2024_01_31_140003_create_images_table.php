@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->morphs('imageable');
             $table->string('url');
-            $table->string('alt')->nullable();
             $table->timestamps();
         });
     }
