@@ -1,1 +1,4 @@
-import './bootstrap';
+import {handle} from "./app/index.js";
+
+handle()
+
