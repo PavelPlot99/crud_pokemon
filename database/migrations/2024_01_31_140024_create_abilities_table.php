@@ -11,7 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('abilities', function (Blueprint $table) {
             Schema::create('abilities', function (Blueprint $table) {
                 $table->id();
                 $table->string('title_ru');
@@ -20,7 +19,6 @@ return new class extends Migration
                 $table->foreign('pokemon_id')->references('id')->on('pokemons')->onDelete('cascade');
                 $table->timestamps();
             });
-        });
     }
 
     /**
