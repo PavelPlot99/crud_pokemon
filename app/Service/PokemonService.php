@@ -35,6 +35,7 @@ class PokemonService
                 $path = $image->store('pokemon_images', 'public');
                 $pokemon->images()->create([
                     'path' => $path,
+                    'imageable_type' => Model::getActualClassNameForMorph(Pokemon::class),
                 ]);
             }
         }

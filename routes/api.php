@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AbilityController;
 use App\Http\Controllers\Api\PokemonController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,8 @@ Route::prefix('pokemons')->group(function() {
    Route::patch('/{pokemon}', [PokemonController::class, 'update'])->name('pokemon.update');
    Route::post('/', [PokemonController::class, 'store'])->name('pokemon.store');
    Route::delete('/{pokemon}', [PokemonController::class, 'destroy'])->name('pokemon.destroy');
+});
+
+Route::prefix('abilities')->group(function() {
+    Route::post('/', [AbilityController::class, 'store'])->name('ability.store');
 });

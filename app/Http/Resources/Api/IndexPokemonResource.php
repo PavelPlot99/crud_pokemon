@@ -22,6 +22,7 @@ class IndexPokemonResource extends JsonResource
             'location_id' => $this->location_id,
             'location' => IndexLocationResource::make($this->location),
             'images' => IndexImageResource::collection($this->images),
+            'abilities' => IndexAbilityResource::collection($this->abilities)
         ];
     }
 }
